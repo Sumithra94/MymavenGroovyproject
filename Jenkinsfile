@@ -6,12 +6,12 @@ pipeline {
                      echo 'Hi, this is Sumithra from SameTime'
                  }
                  }
-                 stage('Two') {
+                 stage('proceed') {
                  steps {
                     input('Do you want to proceed?')
                  }
                  }
-                 stage('Three') {
+                 stage('Deploy') {
                  when {
                        not {
                             branch "master"
@@ -19,6 +19,9 @@ pipeline {
                  }
                  steps {
                        echo "Hello"
+					   
+                       sh 'mvn clean build'
+            
                  }
                  }
                  
