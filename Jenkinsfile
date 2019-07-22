@@ -6,7 +6,7 @@ node {
 	          
     withMaven(
         
-        maven: 'MyMaven',
+        maven: 'MVN_HOME',
         
         sh "mvn clean install"
 		
