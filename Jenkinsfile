@@ -10,5 +10,5 @@ node {
  	bat "${MVN_HOME}/bin/mvn clean package"
  	}
 		
-		)
+)
 	
