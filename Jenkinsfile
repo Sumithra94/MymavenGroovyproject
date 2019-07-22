@@ -6,3 +6,5 @@ node(){
  	sh "${MVN_HOME}/bin/mvn clean package"
  	}
 	
+}
+	
