@@ -1,14 +1,8 @@
-node {
-
-  stage ('Build') {
- 
-    git url: 'https://github.com/Sumithra94/MymavenGroovyproject'
-  }
-
-	stage('building the artifcat')
+node(){
+ 	def mavenHome=tool name: "MVN_HOME", type: "maven"
+ 	 
+ 	stage('building the onlineshoping artifactBuild')
  	{
- 	bat "${MVN_HOME}/bin/mvn clean package"
+ 	sh "${MVN_HOME}/bin/mvn clean package"
  	}
-		
-)
 	
