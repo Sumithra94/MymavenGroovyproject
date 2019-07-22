@@ -1,9 +1,12 @@
 node(){
  	def mavenHome=tool name: "MVN_HOME", type: "maven"
  	 
- 	stage('building the onlineshoping artifactBuild')
- 	{
- 	sh "${MVN_HOME}/bin/mvn clean package"
+ 	stage('Build'){
+ 	if(isUnix()){
+ 	sh 'mvn clean package'
+ 	}else{
+ 	bat 'mvn clean package'
+ 	}
  	}
 	
 }
